@@ -2,7 +2,7 @@
 
 ## /2-basic-closure
 
-> uncaught error: 4/11/2020, 4:31:30 PM 
+> pass: 4/13/2020, 11:42:48 PM 
 
 [../REVIEW.md](../REVIEW.md)
 
