@@ -2,8 +2,7 @@
 
 ## /3-closed-variables
 
-> pass: 4/13/2020, 11:42:48 PM 
-
+> pass: 4/14/2020, 12:28:15 AM 
 
 [../REVIEW.md](../REVIEW.md)
 
@@ -107,13 +106,11 @@ closure1("second call to closure1");
 * [review source](./exercise-1.js)
 
 ```txt
-
 + PASS : assert 1
 + PASS : assert 2
 + PASS : assert 3
 + PASS : assert 4
 + PASS : assert 5
-
 ```
 
 ```js
@@ -150,14 +147,12 @@ console.assert(parentScopeVariable === "spoonspoonparentScopelocallocal", "asser
 * [review source](./exercise-2.js)
 
 ```txt
-
 + PASS : assert 1
 + PASS : assert 2
 + PASS : assert 3
 + PASS : assert 4
 + PASS : assert 5
 + PASS : assert 6
-
 ```
 
 ```js

@@ -2,14 +2,12 @@
 
 ## /1-identifying-closure
 
-
-> uncaught error: 4/13/2020, 11:42:48 PM 
-
+> uncaught error: 4/14/2020, 12:28:15 AM 
 
 [../REVIEW.md](../REVIEW.md)
 
 * [/example-1-returning-functions.js](#example-1-returning-functionsjs) - example - pass
-* [/example-2-never-creates-closure.js](#example-2-never-creates-closurejs) - example - fail
+* [/example-2-never-creates-closure.js](#example-2-never-creates-closurejs) - example - pass
 * [/example-3-always-creates-closure.js](#example-3-always-creates-closurejs) - example - no status
 * [/example-4-sometimes-creates-closure-a.js](#example-4-sometimes-creates-closure-ajs) - example - uncaught error
 * [/example-5-sometimes-creates-closure-b.js](#example-5-sometimes-creates-closure-bjs) - example - uncaught error
@@ -56,14 +54,14 @@ newFunction();
 
 ## /example-2-never-creates-closure.js
 
-* example - fail
+* example - pass
 * [review source](./example-2-never-creates-closure.js)
 
 ```txt
-- FAIL : ... when passed 4
-- FAIL : ... when passed a function
-- FAIL : ... when passed an array
-- FAIL : ... when passed itself
++ PASS : ... when passed 4
++ PASS : ... when passed a function
++ PASS : ... when passed an array
++ PASS : ... when passed itself
 ```
 
 ```js
@@ -85,16 +83,16 @@ const never = (x) => {
 }
 
 const whenPassed4 = doesItClose(never, 4);
-console.assert(whenPassed4 === null, "... when passed 4");
+console.assert(whenPassed4 === false, "... when passed 4");
 
 const whenPassedAFunction = doesItClose(never, function () { });
-console.assert(whenPassedAFunction === null, "... when passed a function");
+console.assert(whenPassedAFunction === false, "... when passed a function");
 
 const whenPassedAnArray = doesItClose(never, []);
-console.assert(whenPassedAnArray === null, "... when passed an array");
+console.assert(whenPassedAnArray === false, "... when passed an array");
 
 const whenPassedItself = doesItClose(never, never);
-console.assert(whenPassedItself === null, "... when passed itself");
+console.assert(whenPassedItself === false, "... when passed itself");
 
 ```
 
