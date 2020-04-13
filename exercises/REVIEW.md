@@ -2,7 +2,9 @@
 
 ## /exercises
 
-> uncaught error: 4/13/2020, 10:44:20 PM 
+
+> uncaught error: 4/13/2020, 11:42:48 PM 
+
 
 * [/1-identifying-closure](./1-identifying-closure/REVIEW.md) - no status
   * [/example-1-returning-functions.js](./1-identifying-closure/REVIEW.md#example-1-returning-functionsjs) - example - pass
@@ -16,12 +18,13 @@
   * [/exercise-2.js](./2-basic-closure/REVIEW.md#exercise-2js) - pass
   * [/exercise-3.js](./2-basic-closure/REVIEW.md#exercise-3js) - pass
   * [/exercise-4.js](./2-basic-closure/REVIEW.md#exercise-4js) - pass
-* [/3-closed-variables](./3-closed-variables/REVIEW.md) - uncaught error
+
+* [/3-closed-variables](./3-closed-variables/REVIEW.md) - pass
   * [/example-1-a-free-variable.js](./3-closed-variables/REVIEW.md#example-1-a-free-variablejs) - example - no status
   * [/example-2-not-from-closure.js](./3-closed-variables/REVIEW.md#example-2-not-from-closurejs) - example - no status
   * [/example-3-from-closure.js](./3-closed-variables/REVIEW.md#example-3-from-closurejs) - example - no status
-  * [/exercise-1.js](./3-closed-variables/REVIEW.md#exercise-1js) - uncaught error
-  * [/exercise-2.js](./3-closed-variables/REVIEW.md#exercise-2js) - uncaught error
+  * [/exercise-1.js](./3-closed-variables/REVIEW.md#exercise-1js) - pass
+  * [/exercise-2.js](./3-closed-variables/REVIEW.md#exercise-2js) - pass
 * [/4-sharing-state](./4-sharing-state/REVIEW.md) - uncaught error
   * [/example-1-pure-functions.js](./4-sharing-state/REVIEW.md#example-1-pure-functionsjs) - example - fail
   * [/example-2-pure-closures.js](./4-sharing-state/REVIEW.md#example-2-pure-closuresjs) - example - fail
