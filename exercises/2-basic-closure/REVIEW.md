@@ -2,9 +2,7 @@
 
 ## /2-basic-closure
 
-
-> pass: 4/13/2020, 11:42:48 PM 
-
+> pass: 4/14/2020, 12:28:15 AM 
 
 [../REVIEW.md](../REVIEW.md)
 
