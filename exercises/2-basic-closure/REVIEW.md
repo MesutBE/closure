@@ -2,7 +2,7 @@
 
 ## /2-basic-closure
 
-> uncaught error: 4/13/2020, 10:35:01 PM 
+> pass: 4/13/2020, 10:44:20 PM 
 
 [../REVIEW.md](../REVIEW.md)
 
@@ -10,7 +10,7 @@
 * [/exercise-1.js](#exercise-1js) - pass
 * [/exercise-2.js](#exercise-2js) - pass
 * [/exercise-3.js](#exercise-3js) - pass
-* [/exercise-4.js](#exercise-4js) - uncaught error
+* [/exercise-4.js](#exercise-4js) - pass
 
 ---
 
@@ -182,21 +182,16 @@ console.assert(result6 === "iiib d", "result 6");
 
 ## /exercise-4.js
 
-* uncaught error
+* pass
 * [review source](./exercise-4.js)
 
 ```txt
-ReferenceError: _ is not defined
-    at Object.<anonymous> ( [ ... ] /exercises/2-basic-closure/exercise-4.js:10:28)
-    at Module._compile (internal/modules/cjs/loader.js:1147:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)
-    at Module.load (internal/modules/cjs/loader.js:996:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:896:14)
-    at Module.require (internal/modules/cjs/loader.js:1036:19)
-    at require (internal/modules/cjs/helpers.js:72:18)
-    at evaluate ( [ ... ] /review.js:229:7)
-    at Object.<anonymous> ( [ ... ] /review.js:244:1)
-    at Module._compile (internal/modules/cjs/loader.js:1147:30)
++ PASS : result 1
++ PASS : result 2
++ PASS : result 3
++ PASS : result 4
++ PASS : result 5
++ PASS : result 6
 ```
 
 ```js
@@ -209,25 +204,25 @@ const closeIt = (x, y) => {
 const closure_4_5 = closeIt(4, 5);
 
 const result1 = closure_4_5(200);
-console.assert(result1 === _, "result 1");
+console.assert(result1 === 205, "result 1");
 
 const result2 = closure_4_5(-3);
-console.assert(result2 === _, "result 2");
+console.assert(result2 === 2, "result 2");
 
 
 const closure_false_true = closeIt(false, true);
 
 const result3 = closure_false_true(200);
-console.assert(result3 === _, "result 3");
+console.assert(result3 === 201, "result 3");
 
 const result4 = closure_false_true(-3);
-console.assert(result4 === _, "result 4");
+console.assert(result4 === -2, "result 4");
 
 
 const result5 = closure_4_5(1);
-console.assert(result5 === _, "result 5");
+console.assert(result5 === 6, "result 5");
 
-const result6 = closure_4_5(_) + closure_false_true(_);
+const result6 = closure_4_5(0) + closure_false_true(0);
 console.assert(result6 === 6, "result 6");
 
 ```
