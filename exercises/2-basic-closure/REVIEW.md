@@ -2,12 +2,12 @@
 
 ## /2-basic-closure
 
-> uncaught error: 4/11/2020, 4:31:30 PM 
+> uncaught error: 4/13/2020, 7:37:16 PM 
 
 [../REVIEW.md](../REVIEW.md)
 
 * [/example-parent-and-own-values.js](#example-parent-and-own-valuesjs) - example - no status
-* [/exercise-1.js](#exercise-1js) - uncaught error
+* [/exercise-1.js](#exercise-1js) - pass
 * [/exercise-2.js](#exercise-2js) - uncaught error
 * [/exercise-3.js](#exercise-3js) - uncaught error
 * [/exercise-4.js](#exercise-4js) - uncaught error
@@ -41,21 +41,15 @@ const result2 = closure2("d");
 
 ## /exercise-1.js
 
-* uncaught error
+* pass
 * [review source](./exercise-1.js)
 
 ```txt
-ReferenceError: _ is not defined
-    at Object.<anonymous> ( [ ... ] /exercises/2-basic-closure/exercise-1.js:9:31)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:788:10)
-    at Module.load (internal/modules/cjs/loader.js:643:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
-    at Module.require (internal/modules/cjs/loader.js:683:19)
-    at require (internal/modules/cjs/helpers.js:16:16)
-    at evaluate ( [ ... ] /review.js:229:7)
-    at Object.<anonymous> ( [ ... ] /review.js:244:1)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
++ PASS : asserting one's return value
++ PASS : asserting two's return value
++ PASS : asserting three's return value
++ PASS : summing closed values
++ PASS : create the value 16 using your closed functions
 ```
 
 ```js
@@ -67,21 +61,21 @@ const closeAValue = (val) => {
 
 const one = closeAValue(1);
 const oneReturns = one();
-console.assert(oneReturns === _, "asserting one's return value");
+console.assert(oneReturns === 1, "asserting one's return value");
 
 const two = closeAValue(2);
 const twoReturns = two();
-console.assert(twoReturns === _, "asserting two's return value");
+console.assert(twoReturns === 2, "asserting two's return value");
 
-const three = _;
-const threeReturns = _;
+const three = closeAValue(4);
+const threeReturns = three();
 console.assert(threeReturns === 4, "asserting three's return value");
 
 
-const sum = one + two + three; // fix this line to pass the assert
+const sum = one() + two() + three(); // fix this line to pass the assert
 console.assert(sum === 7, "summing closed values");
 
-const product = _; // fix this line to pass the assert
+const product = three() * three(); // fix this line to pass the assert
 console.assert(product === 16, "create the value 16 using your closed functions");
 
 ```
@@ -98,15 +92,15 @@ console.assert(product === 16, "create the value 16 using your closed functions"
 ```txt
 ReferenceError: _ is not defined
     at Object.<anonymous> ( [ ... ] /exercises/2-basic-closure/exercise-2.js:12:28)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:788:10)
-    at Module.load (internal/modules/cjs/loader.js:643:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
-    at Module.require (internal/modules/cjs/loader.js:683:19)
-    at require (internal/modules/cjs/helpers.js:16:16)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)
+    at Module.load (internal/modules/cjs/loader.js:996:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:896:14)
+    at Module.require (internal/modules/cjs/loader.js:1036:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
     at evaluate ( [ ... ] /review.js:229:7)
     at Object.<anonymous> ( [ ... ] /review.js:244:1)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
 ```
 
 ```js
@@ -147,15 +141,15 @@ console.assert(result5 === result6, "results 5 & 6");
 ```txt
 ReferenceError: _ is not defined
     at Object.<anonymous> ( [ ... ] /exercises/2-basic-closure/exercise-3.js:12:28)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:788:10)
-    at Module.load (internal/modules/cjs/loader.js:643:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
-    at Module.require (internal/modules/cjs/loader.js:683:19)
-    at require (internal/modules/cjs/helpers.js:16:16)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)
+    at Module.load (internal/modules/cjs/loader.js:996:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:896:14)
+    at Module.require (internal/modules/cjs/loader.js:1036:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
     at evaluate ( [ ... ] /review.js:229:7)
     at Object.<anonymous> ( [ ... ] /review.js:244:1)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
 ```
 
 ```js
@@ -205,15 +199,15 @@ console.assert(result6 === "iiib d", "result 6");
 ```txt
 ReferenceError: _ is not defined
     at Object.<anonymous> ( [ ... ] /exercises/2-basic-closure/exercise-4.js:10:28)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:788:10)
-    at Module.load (internal/modules/cjs/loader.js:643:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
-    at Module.require (internal/modules/cjs/loader.js:683:19)
-    at require (internal/modules/cjs/helpers.js:16:16)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)
+    at Module.load (internal/modules/cjs/loader.js:996:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:896:14)
+    at Module.require (internal/modules/cjs/loader.js:1036:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
     at evaluate ( [ ... ] /review.js:229:7)
     at Object.<anonymous> ( [ ... ] /review.js:244:1)
-    at Module._compile (internal/modules/cjs/loader.js:777:30)
+    at Module._compile (internal/modules/cjs/loader.js:1147:30)
 ```
 
 ```js
